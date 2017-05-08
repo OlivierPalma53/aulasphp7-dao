@@ -9,21 +9,21 @@
 
     }
 
-    private function setParams($statment, parameters = array()){
-      foreach($parameters as key => value){
+    private function setParams($statment, $parameters = array()){
+      foreach($parameters as $key => $value){
 
         $this->setParam($key, $value);
 
       }
     }
 
-    private setParam($statment, $key, $value){
-      $statment->bindParam($key, $value)
+    private function setParam($statment, $key, $value){
+      $statment->bindParam($key, $value);
     }
 
     public function query($rawQuery, $params = array()){
 
-      $stmt $this->conn->prepare($rawQuery);
+      $stmt = $this->conn->prepare($rawQuery);
 
       $this->setParams($stmt, $params);
 
@@ -33,7 +33,7 @@
 
     }
 
-    public function select($rawQuery, $params):array {
+    public function select($rawQuery, $params = array()):array {
       $stmt = $this->query($rawQuery, $params);
 
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
