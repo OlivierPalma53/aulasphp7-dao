@@ -6,6 +6,11 @@
     private $dessenha;
     private $dtcadastro;
 
+    public function __construct($login = null, $senha = null){
+      $this->setDeslogin($login);
+      $this->setDessenha($senha);
+    }
+
     public function getIdusuario(){
       return $this->idusuario;
     }

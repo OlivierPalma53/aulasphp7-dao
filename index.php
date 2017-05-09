@@ -35,13 +35,12 @@
   echo $usuario;
   */
 
-  $professor = new Usuario();
-  $professor->setDeslogin("Professor");
-  $professor->setDessenha("professor");
+  $aluno = new Usuario('aluno', '@luno');
 
-  $professor->insertUser();
 
-  echo $professor;
+  $aluno->insertUser();
+
+  echo $aluno;
 
 
 ?>
