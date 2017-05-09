@@ -28,8 +28,20 @@
   $search = Usuario::searchUser("Olivier");
   echo json_encode($search);
   */
+
+  /* autentica usuario
   $usuario = new Usuario();
   $usuario->login("Olivier", "storm5310");
   echo $usuario;
+  */
+
+  $professor = new Usuario();
+  $professor->setDeslogin("Professor");
+  $professor->setDessenha("professor");
+
+  $professor->insertUser();
+
+  echo $professor;
+
 
 ?>
