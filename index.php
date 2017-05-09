@@ -46,7 +46,7 @@
 
   $usuario = new Usuario();
   $usuario->setIdusuario(10);
-  $usuario->update('teste', 'teste');
+  $usuario->delete();
 
 
 ?>
