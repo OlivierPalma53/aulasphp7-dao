@@ -18,8 +18,13 @@
 
   */
 
+  /* Lista todos os usuarios
   $usersList = Usuario::getUsers();
 
   echo json_encode($usersList);
+  */
+
+  $search = Usuario::searchUser("Olivier");
+  echo json_encode($search);
 
 ?>
