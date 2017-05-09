@@ -24,7 +24,12 @@
   echo json_encode($usersList);
   */
 
+  /* procura usuarios
   $search = Usuario::searchUser("Olivier");
   echo json_encode($search);
+  */
+  $usuario = new Usuario();
+  $usuario->login("Olivier", "storm5310");
+  echo $usuario;
 
 ?>
