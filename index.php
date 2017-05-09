@@ -35,12 +35,18 @@
   echo $usuario;
   */
 
+  /* inserindo usuario
   $aluno = new Usuario('aluno', '@luno');
 
 
   $aluno->insertUser();
 
   echo $aluno;
+  */
+
+  $usuario = new Usuario();
+  $usuario->setIdusuario(10);
+  $usuario->update('teste', 'teste');
 
 
 ?>

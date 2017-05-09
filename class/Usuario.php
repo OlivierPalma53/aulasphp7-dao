@@ -110,6 +110,19 @@
       }
     }
 
+    public function update($login, $senha){
+
+      $this->setDeslogin($login);
+      $this->setDessenha($senha);
+
+      $sql = new Sql();
+      $sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
+        "LOGIN"=>$this->getDeslogin(),
+        "PASSWORD"=>$this->getDessenha(),
+        "ID"=>$this->getIdusuario()
+      ));
+    }
+
     public function __toString(){
       return json_encode(array(
         "idusuario"=> $this->getIdusuario(),
